@@ -1,4 +1,4 @@
-﻿namespace SalaryManagement;
+namespace SalaryManagement;
 class Program
 {
     static void Main(string[] args)
@@ -59,9 +59,9 @@ class Program
                             │ Contact support if problem occurs ( +46 4342444) |
                             └──────────────────────────────────────────────────┘";
         string goBackMessage = $"#- Press [ESCAPE TO GO BACK]-#";
-
+        bool menuIsOpen = true;
         Console.WriteLine(welcome);
-
+    do{
         ConsoleKeyInfo pressedKey = Console.ReadKey();
         switch (pressedKey.Key)
         {
@@ -89,5 +89,6 @@ class Program
                 Menu();
                 break;
         }
+    }while(menuIsOpen);
     }
 }
